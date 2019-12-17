@@ -1,31 +1,39 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+    <v-app class="my-app">
+        <app-navigation></app-navigation>
+        <router-view></router-view>
+        <Footer></Footer>
+    </v-app>
 </template>
 
+<script>
+    import AppNavigation from '@/components/AppNavigation';
+    import Footer from '@/components/Footer';
+
+    export default {
+        name: 'App',
+        components: {
+            AppNavigation,
+            Footer
+        }
+    };
+</script>
+
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+    @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+    .my-app{
+        font-family: 'Lato', 'sans-serif'!important;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+    .v-application {
+        line-height: 1.75;
+    }
+</style>
+
+<style lang="scss">
+
 </style>

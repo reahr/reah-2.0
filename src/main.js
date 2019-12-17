@@ -1,12 +1,20 @@
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
+import vuetify from './plugins/vuetify';
+import '@babel/polyfill';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 Vue.config.productionTip = false;
 
+Vue.use(vuetify);
+
 new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount("#app");
+    created(){AOS.init()},
+    router,
+    store,
+    vuetify,
+    render: h => h(App)
+}).$mount('#app');
