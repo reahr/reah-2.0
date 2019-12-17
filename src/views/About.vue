@@ -4,7 +4,7 @@
             <div class="subtext">I am a software developer based in NYC.</div>
             <div class="subtext-sm">I enjoy developing products that turn complex problems into intuitive solutions. Keeping up with contemporary technologies is essential to remain sharp in the development world and so I chose to build the first iteration of my personal site using Vue.</div>
             <div class="subtext-sm pTop10">Backbone.js, jQuery, Bootstrap, Node.js, Java are the main tricks up my sleeve. I especially enjoy creating interactive reusable components for web applications.</div>
-            <div class="subtext-sm pTop10">When I'm not coding, you'll probably find me boxing, eating, or browsing the next best memes (✿◠‿◠).</div>
+            <div class="subtext-sm pTop10">When I'm not coding, you'll probably find me boxing, eating, or watching the next best superhero movie (✿◠‿◠).</div>
         </v-container>
 </template>
 
@@ -41,6 +41,24 @@
 
         .subtext-sm{
             font-size: 1.0rem !important;
+        }
+    }
+    @media (max-width:  340px){
+        .about {
+            padding-top: 3.5rem !important;
+        }
+
+        .intro {
+            font-size: 1.5rem !important;
+            line-height: 1.0 !important;
+        }
+
+        .subtext{
+            font-size: 1.0rem !important;
+        }
+
+        .subtext-sm{
+            font-size: 0.75rem !important;
         }
     }
 </style>

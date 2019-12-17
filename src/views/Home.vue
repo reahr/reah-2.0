@@ -3,6 +3,7 @@
         <v-container class="home transitionInto">
             <div class="intro text-center">Hi, I'm Reah!</div>
             <div class="subtext text-center">Software Developer | Ninja</div>
+            <img :src="require('../assets/Circle.svg')"/>
             <v-btn icon class="scrollNext bounce" v-on:click="scrollToNext">
                 <v-icon>mdi-chevron-down</v-icon>
             </v-btn>
@@ -18,12 +19,10 @@ import About from '@/views/About.vue';
 export default {
     methods: {
         handleScroll (event) {
-            console.log()
             // Any code to be executed when the window is scrolled
         },
         scrollToNext: function(){
             var elem = this.$refs.about.$el;
-            console.log(elem);
             elem.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
@@ -31,10 +30,10 @@ export default {
         }
     },
     created () {
-        window.addEventListener('scroll', this.handleScroll);
+//        window.addEventListener('scroll', this.handleScroll);
     },
     destroyed () {
-        window.removeEventListener('scroll', this.handleScroll);
+//        window.removeEventListener('scroll', this.handleScroll);
     },
     data () {
         return {

@@ -1,7 +1,9 @@
 <template>
     <div>
         <v-app-bar class="navbar" absolute :flat="flat">
-            <img class="mr-3" :src="require('../assets/reverse-reah.svg')" height="40"/>
+            <router-link to="/" exact>
+                <img class="mr-3" :src="require('../assets/reverse-reah.svg')" height="40"/>
+            </router-link>
 
             <v-spacer></v-spacer>
 
@@ -9,7 +11,7 @@
 
             <template v-if="$vuetify.breakpoint.smAndUp">
                 <v-toolbar-items>
-                    <v-btn text>Resume</v-btn>
+                    <v-btn to="/resume" exact text>Resume</v-btn>
                     <v-btn text>Portfolio</v-btn>
                     <v-btn text>Contact</v-btn>
                 </v-toolbar-items>
