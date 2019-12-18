@@ -128,10 +128,6 @@ export default {
             transform: translateY(-15px); } }
 
 
-    .v-btn:focus:before {
-        opacity: 0 !important;
-    }
-
     @keyframes fade-in {
         0% {
             opacity: 0;
