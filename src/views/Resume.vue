@@ -1,30 +1,38 @@
 <template>
-    <div class="resume-container">
+    <v-container class="resume-container">
         <ul class="experience-list">
-            <li class="experience-item">
-                <div class="experience-top">
-                    <div>
-                        New York
-                    </div>
-                    <div>
-                        June - Oct 2019
-                    </div>
-                </div>
-                <img class="time-point" :src="require('../assets/reverse-reah.svg')" v-show="$vuetify.breakpoint.smAndUp"/>
-                <div class="experience-desc">
-                    <div>Software Developer</div>
-                    <div>Did some important stuff...</div>
-                </div>
-            </li>
+            <resume-item
+                    v-for="item in items"
+                    v-bind:key="item.id"
+                    v-bind:item="item"
+            ></resume-item>
         </ul>
-    </div>
+    </v-container>
 </template>
 
 <script>
+    import ResumeItem from '@/components/ResumeItem';
+
     export default {
+        components: {
+            ResumeItem,
+        },
         data: () => ({
             length: 3,
             window: 0,
+            items: [
+                {
+                    id: 0,
+                    startDate: "Feb. 2019",
+                    endDate: "Today",
+                    title: "Software Developer",
+                    company: "RelPro",
+                    desc: "<div>Developing various features of the company's product, including the company's brand website, web "
+                    + "application, Chrome extension, and QA testing all within an agile environment. Right "
+                    + "now I focus primarily on front end development but I dabble a bit in the back end world using MySQL and Node.js. The latest "
+                    + "project I worked on introduced export customization on the platform enabling clients to narrow down on the information they want to see.</div>"
+                }
+            ]
         }),
     }
 </script>
@@ -41,64 +49,6 @@
         .resume-container {
             padding-top: 4.5rem !important;
         }
-    }
-
-    .experience-top {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 1rem;
-    }
-
-    .experience-item {
-        position: relative;
-        margin-bottom: 1rem;
-        min-height: 5rem;
-    }
-
-    li {
-        list-style-type: none;
-    }
-
-    @media (min-width: 600px) {
-        .experience-item{
-            display: flex;
-        }
-
-        .experience-top {
-            margin-bottom: 0;
-            display: block;
-            width: 16.66667%;
-        }
-
-        .time-point {
-            height: 8.33333%;
-            width: 8.33333%;
-        }
-
-        .experience-desc{
-            padding: 0 0 0 2.5rem !important;
-            margin-top: 0;
-            width: 75%;
-        }
-
-        /*.resume-container {*/
-            /*display: initial;*/
-        /*}*/
-    }
-
-    .time-point {
-        position: relative;
-        display: block;
-        width: 16.66667%;
-        height: 16.66667%;
-        font-size: 32px;
-    }
-
-    .experience-desc {
-        position: relative;
-        padding: 0;
-        text-align: left;
     }
 
     .experience-list{
