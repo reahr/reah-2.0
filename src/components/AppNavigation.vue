@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-app-bar class="navbar" absolute :flat="flat">
-            <router-link to="/" exact>
+            <router-link to="/" exact class="a-link">
                 <img class="mr-3" :src="require('../assets/reverse-reah.svg')" height="40"/>
             </router-link>
 
@@ -42,5 +42,9 @@
 <style scoped>
     .navbar {
         position: fixed !important;
+    }
+
+    .a-link {
+        display: inline-flex;
     }
 </style>

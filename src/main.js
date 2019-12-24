@@ -7,6 +7,9 @@ import '@babel/polyfill';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+import {InlineSvgPlugin} from 'vue-inline-svg';
+Vue.use(InlineSvgPlugin);
+
 Vue.config.productionTip = false;
 
 Vue.use(vuetify);

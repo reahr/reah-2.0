@@ -1,13 +1,19 @@
 <template>
-    <v-container class="resume-container">
-        <ul class="experience-list">
-            <resume-item
-                    v-for="item in items"
-                    v-bind:key="item.id"
-                    v-bind:item="item"
-            ></resume-item>
-        </ul>
-    </v-container>
+    <div>
+        <v-container class="resume-container">
+            <ul class="experience-list">
+                <resume-item
+                        v-for="item in items"
+                        v-bind:key="item.id"
+                        v-bind:item="item"
+                ></resume-item>
+            </ul>
+            <hr>
+            <div>
+                <inline-svg class="responsive-img" :src="require('../assets/Skills Infographic (1).svg')"/>
+            </div>
+        </v-container>
+    </div>
 </template>
 
 <script>
@@ -20,6 +26,11 @@
         data: () => ({
             length: 3,
             window: 0,
+            'list-items': [
+                { title: 'Dashboard', icon: 'dashboard' },
+                { title: 'Account', icon: 'account_box' },
+                { title: 'Admin', icon: 'gavel' },
+            ],
             items: [
                 {
                     id: 0,
@@ -51,6 +62,12 @@
         }
     }
 
+    @media (min-width: 960px){
+        .resume-container{
+            padding-top: 5.0rem;
+        }
+    }
+
     .experience-list{
         padding-left: 0!important;
         position: relative;
@@ -66,5 +83,10 @@
         left: calc(23% - 1px);
         right: initial;
         background: rgba(0, 0, 0, 0.12);
+    }
+
+    .responsive-img {
+        max-width: 100%;
+        height: auto;
     }
 </style>

@@ -71,27 +71,13 @@ export default {
         align-items: center;
         flex-direction: column;
         position: relative;
+        padding-top: 3.0rem;
     }
 
     .scrollNext {
         position: absolute !important;
         bottom:12px;
     }
-
-    .intro {
-        font-size: 6.25rem;
-        line-height: 6.25rem;
-    }
-
-    .subtext {
-        font-size: 2.0rem;
-        font-weight: 500;
-    }
-
-    .v-sheet {
-        background-color: #f5f5f5 !important;
-    }
-
 
     @-webkit-keyframes bounce {
         0%,
@@ -108,7 +94,7 @@ export default {
             -webkit-transform: translateY(-15px);
             transform: translateY(-15px); } }
 
-    .bounce:hover {
+    .bounce {
         animation: bounce 2s infinite;
     }
 
@@ -147,4 +133,16 @@ export default {
         animation: fade-in 0.5s;
     }
 
+    @media (min-width: 600px){
+
+        .intro {
+            font-size: 6.25rem;
+            line-height: 6.25rem;
+        }
+
+        .subtext {
+            font-size: 2.0rem;
+            font-weight: 500;
+        }
+    }
 </style>

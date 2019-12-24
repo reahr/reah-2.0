@@ -1,5 +1,5 @@
 <template>
-        <v-container class="home about">
+        <v-container class="about">
             <div class="intro">About</div>
             <div class="subtext">I am a software developer based in NYC.</div>
             <div class="subtext-sm">I enjoy developing products that turn complex problems into intuitive solutions. Keeping up with contemporary technologies is essential to remain sharp in the development world and so I chose to build the first iteration of my personal site using Vue.</div>
@@ -9,56 +9,58 @@
 </template>
 
 <style>
-    .home {
-        padding: 3em !important;
-    }
-
     .about {
-        align-items: flex-start !important;
+        min-height: 100vh;
+        padding-top: 7.5rem !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
     }
 
-    .subtext-sm {
-        font-size: 1.25rem;
+    .intro {
+        font-size: 1.5rem;
+        line-height: 1.0;
     }
 
-    .pTop10{
-        padding-top: 10px
+    .subtext{
+        font-size: 1.0rem;
     }
 
-    @media (max-width:  600px){
+    .subtext-sm{
+        font-size: 0.75rem;
+    }
+
+    @media (min-width:  340px){
         .about {
-            padding-top: 4.5rem !important;
+            padding-top: 10.5rem !important;
         }
 
         .intro {
-            font-size: 2.0rem !important;
-            line-height: 1.0 !important;
+            font-size: 2.0rem;
+            line-height: 1.0;
         }
 
         .subtext{
-            font-size: 1.25rem !important;
+            font-size: 1.25rem;
         }
 
         .subtext-sm{
-            font-size: 1.0rem !important;
+            font-size: 1.0rem;
         }
     }
-    @media (max-width:  340px){
+
+    @media (min-width: 600px){
         .about {
-            padding-top: 3.5rem !important;
+            justify-content: flex-start;
+            padding-top: 8.0rem !important;
+            align-items: flex-start;
         }
 
-        .intro {
-            font-size: 1.5rem !important;
-            line-height: 1.0 !important;
+        .subtext-sm {
+            font-size: 1.25rem;
         }
 
-        .subtext{
-            font-size: 1.0rem !important;
-        }
-
-        .subtext-sm{
-            font-size: 0.75rem !important;
+        .pTop10{
+            padding-top: 10px
         }
     }
 </style>

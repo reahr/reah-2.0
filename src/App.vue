@@ -28,10 +28,6 @@
     ::-webkit-scrollbar {
         display: none;
     }
-
-    .v-application {
-        line-height: 1.75;
-    }
 </style>
 
 <style lang="scss">

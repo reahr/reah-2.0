@@ -5,7 +5,7 @@
                 {{ item.startDate }} - {{ item.endDate }}
             </div>
         </div>
-        <img class="time-point" :src="require('../assets/reverse-reah.svg')" v-show="$vuetify.breakpoint.smAndUp"/>
+        <v-icon class="time-point" v-show="$vuetify.breakpoint.smAndUp">mdi-record</v-icon>
         <div class="experience-desc">
             <div>{{ item.title }} — {{ item.company}} </div>
             <div v-html="item.desc">
