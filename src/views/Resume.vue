@@ -10,7 +10,8 @@
             </ul>
             <hr>
             <div>
-                <inline-svg class="responsive-img" :src="require('../assets/Skills Infographic (1).svg')"/>
+                <info></info>
+                <!--<inline-svg class="responsive-img" :src="require('../assets/Skills Infographic (2).svg')"/>-->
             </div>
         </v-container>
     </div>
@@ -18,10 +19,16 @@
 
 <script>
     import ResumeItem from '@/components/ResumeItem';
+    import Info from '@/components/svg/info';
+
 
     export default {
+        methods: {
+
+        },
         components: {
             ResumeItem,
+            Info
         },
         data: () => ({
             length: 3,
@@ -83,10 +90,5 @@
         left: calc(23% - 1px);
         right: initial;
         background: rgba(0, 0, 0, 0.12);
-    }
-
-    .responsive-img {
-        max-width: 100%;
-        height: auto;
     }
 </style>

@@ -20,11 +20,6 @@
 </script>
 
 <style>
-    @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
-    .my-app{
-        font-family: 'Lato', 'sans-serif'!important;
-    }
     ::-webkit-scrollbar {
         display: none;
     }
