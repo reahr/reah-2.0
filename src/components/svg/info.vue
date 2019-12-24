@@ -244,23 +244,23 @@
                 <tspan y="76" x="-1">Intermediate</tspan>
             </text>
             <g class="C">
-                <rect x="219" width="10" height="120" rx="5"/>
-                <rect x="546" width="10" height="120" rx="5"/>
-                <rect x="417" width="10" height="120" rx="5"/>
-                <rect x="481" y="10" width="10" height="110" rx="5"/>
-                <rect x="677" y="50" width="10" height="70" rx="5"/>
-                <rect x="744" y="40" width="10" height="80" rx="5"/>
-                <rect x="809" y="15" width="10" height="105" rx="5"/>
-                <rect x="809" y="8" width="10" height="110" rx="5"/>
-                <rect x="285" y="20" width="10" height="100" rx="5"/>
-                <rect x="874" y="60" width="10" height="60" rx="5"/>
-                <rect x="1069" y="50" width="10" height="70" rx="5"/>
-                <rect x="1004" y="80" width="10" height="40" rx="5"/>
-                <rect x="1199" y="70" width="10" height="50" rx="5"/>
-                <rect x="939" y="10" width="10" height="110" rx="5"/>
-                <rect x="1134" y="30" width="10" height="90" rx="5"/>
-                <rect x="350" y="86" width="10" height="34" rx="5"/>
-                <rect x="611" y="86" width="10" height="34" rx="5"/>
+                <rect x="219" width="10" height="120" rx="5" class="enlarge"/>
+                <rect x="546" width="10" height="120" rx="5" class="enlarge"/>
+                <rect x="417" width="10" height="120" rx="5" class="enlarge"/>
+                <rect x="481" y="10" width="10" height="110" rx="5" class="enlarge"/>
+                <rect x="677" y="50" width="10" height="70" rx="5" class="enlarge"/>
+                <rect x="744" y="40" width="10" height="80" rx="5" class="enlarge"/>
+                <rect x="809" y="15" width="10" height="105" rx="5" class="enlarge"/>
+                <rect x="809" y="8" width="10" height="110" rx="5" class="enlarge"/>
+                <rect x="285" y="20" width="10" height="100" rx="5" class="enlarge"/>
+                <rect x="874" y="60" width="10" height="60" rx="5" class="enlarge"/>
+                <rect x="1069" y="50" width="10" height="70" rx="5" class="enlarge"/>
+                <rect x="1004" y="80" width="10" height="40" rx="5" class="enlarge"/>
+                <rect x="1199" y="70" width="10" height="50" rx="5" class="enlarge"/>
+                <rect x="939" y="10" width="10" height="110" rx="5" class="enlarge"/>
+                <rect x="1134" y="30" width="10" height="90" rx="5" class="enlarge"/>
+                <rect x="350" y="86" width="10" height="34" rx="5" class="enlarge"/>
+                <rect x="611" y="86" width="10" height="34" rx="5" class="enlarge"/>
             </g>
         </g>
     </svg>
@@ -313,4 +313,53 @@
         max-width: 100%;
         height: auto;
     }
+
+    @keyframes bounceInUp{
+        0%, 60%, 75%, 90%, 100% {
+            -webkit-animation-timing-function: cubic-bezier(.215,.61,.355,1);
+            animation-timing-function: cubic-bezier(.215,.61,.355,1);
+        }
+
+        0% {
+            opacity: 0;
+            -webkit-transform: translate3d(0,3000px,0);
+            transform: translate3d(0,3000px,0);
+        }
+        60% {
+            opacity: 1;
+            -webkit-transform: translate3d(0,-20px,0);
+            transform: translate3d(0,-20px,0);
+        }
+        75% {
+            -webkit-transform: translate3d(0,10px,0);
+            transform: translate3d(0,10px,0);
+        }
+        90% {
+            -webkit-transform: translate3d(0,-5px,0);
+            transform: translate3d(0,-5px,0);
+        }
+        100% {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+    }
+
+    @keyframes ufo-big {
+        0%        {opacity: 0}
+        15%, 70%  {opacity: 1}
+        85%, 100% {opacity: 0}
+    }
+
+    @keyframes draw {
+        to {
+            transform: scaleY(1);
+        }
+    }
+
+    .enlarge {
+        animation: draw 1.5s linear forwards;
+        transform-origin: center center;
+        transform: scaleY(0);
+    }
+
 </style>
