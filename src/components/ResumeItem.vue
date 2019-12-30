@@ -1,13 +1,13 @@
 <template>
     <li class="experience-item">
-        <div class="experience-top">
+        <div class="experience-top sb">
             <div>
                 {{ item.startDate }} - {{ item.endDate }}
             </div>
         </div>
-        <v-icon class="time-point" v-show="$vuetify.breakpoint.smAndUp">mdi-record</v-icon>
+        <img class="time-point" :src="require('../assets/Purple Record.svg')"/>
         <div class="experience-desc">
-            <div>{{ item.title }} — {{ item.company}} </div>
+            <div class="sb" v-if="item.title">{{ item.title }} — <a class="link" target="_blank" :href="item.link">{{ item.company}}</a></div>
             <div v-html="item.desc">
             </div>
             <!--Technologies used include vanilla JavaScript, jQuery, Backbone/Marionette, NodeJS, Bootstrap, HTML/CSS/SCSS-->
@@ -26,17 +26,24 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 1rem;
+        margin-bottom: 16px;
     }
 
     .experience-item {
         position: relative;
-        margin-bottom: 1rem;
+        margin-bottom: 32px;
         min-height: 5rem;
     }
 
     li {
         list-style-type: none;
+    }
+
+
+    .time-point {
+        position: relative;
+        display: none;
+        width: 16.66667%;
     }
 
     @media (min-width: 600px) {
@@ -51,8 +58,9 @@
         }
 
         .time-point {
-            height: 8.33333%;
-            width: 8.33333%;
+            display: block;
+            width: 16.666667%;
+            height: 32px;
         }
 
         .experience-desc{
@@ -66,17 +74,19 @@
         /*}*/
     }
 
-    .time-point {
-        position: relative;
-        display: block;
-        width: 16.66667%;
-        height: 16.66667%;
-        font-size: 32px;
-    }
 
     .experience-desc {
         position: relative;
         padding: 0;
         text-align: left;
+    }
+
+    .sb {
+        font-weight: 600;
+    }
+
+    .link {
+        color: #5f4b8b;
+        text-decoration: underline;
     }
 </style>

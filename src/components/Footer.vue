@@ -1,7 +1,6 @@
 <template>
         <v-footer
                 :padless="padless"
-                absolute
         >
             <v-card
                     flat

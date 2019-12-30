@@ -7,8 +7,6 @@
 
             <v-spacer></v-spacer>
 
-
-
             <template v-if="$vuetify.breakpoint.smAndUp">
                 <v-toolbar-items>
                     <v-btn to="/resume" exact text>Resume</v-btn>
