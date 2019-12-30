@@ -1,11 +1,15 @@
 <template>
-        <v-container class="about">
-            <v-row>
-                <v-col :col="6">
-                    Hi
+        <v-container fluid class="about">
+            <v-row class="flex-row" :align="alignment"
+                   :justify="justify">
+                <v-col :col="6" class="d-flex bg-img">
+                    <div class="contentContainer d-flex">
+                        <div class="heading-title">I’m a software developer based in NYC…
+                        </div>
+                    </div>
                 </v-col>
-                <v-col :col="6">
-It me
+                <v-col :col="6" class="d-flex">
+                    It me
                 </v-col>
             </v-row>
             <!--<div class="intro">About</div>-->
@@ -15,13 +19,20 @@ It me
             <!--<div class="subtext-sm pTop10">When I'm not coding, you'll probably find me boxing, eating, or watching the next best superhero movie (✿◠‿◠).</div>-->
         </v-container>
 </template>
+<script>
+    export default {
+        data () {
+            return {
+                justify: "center",
+                alignment: "stretch"
+            }
+        }
+    }
 
+</script>
 <style>
     .about {
-        min-height: 100vh;
-        padding-top: 4.0rem !important;
-        padding-left: 16px !important;
-        padding-right: 16px !important;
+        padding: 4.0rem 16px 0 !important;
     }
 
     .intro {
@@ -70,5 +81,27 @@ It me
         .pTop10{
             padding-top: 10px
         }
+    }
+
+    .flex-row {
+        min-height: calc(100vh - 64px - 155px);
+    }
+
+    .contentContainer {
+        min-height: 100%;
+        align-items: flex-end;
+        justify-content: center;
+        flex-flow: column;
+    }
+
+    .heading-title {
+        font-size: 36px;
+        font-weight: 600px;
+        text-align: right;
+    }
+
+    .bg-img {
+        background-image: url("../assets/NYC.png");
+        background-size: cover;
     }
 </style>
