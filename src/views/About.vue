@@ -2,21 +2,20 @@
         <v-container fluid class="about">
             <v-row class="flex-row" :align="alignment"
                    :justify="justify">
-                <v-col :col="6" class="d-flex bg-img">
+                <v-col :col="6" class="bg-img pr-25">
                     <div class="contentContainer d-flex">
-                        <div class="heading-title">I’m a software developer based in NYC…
+                        <div class="heading-title">I’m a <span class="keyword">software developer</span><br>based in <span class="keyword">NYC</span>…
                         </div>
                     </div>
                 </v-col>
-                <v-col :col="6" class="d-flex">
-                    It me
+                <v-col :col="6" class="pl-25">
+                    <div class="contentContainer d-flex desc">
+                        <div class="pb-32">My goal is to become an <span class="keyword">UX engineer</span> and use the skills I honed as a <span class="keyword">front-end developer</span> to turn  designs into beautiful and intuitive products.</div>
+                        <div class="pb-32"><span class="keyword">BackboneJS</span>, <span class="keyword">jQuery</span>, and <span class="keyword">Bootstrap</span> are the main tricks up my sleeve. I built this personal site as an entry way to <span class="keyword">VueJS</span> development.</div>
+                        <div>When I’m not coding, you’ll find me boxing, eating, or watching the next big superhero movie.</div>
+                    </div>
                 </v-col>
             </v-row>
-            <!--<div class="intro">About</div>-->
-            <!--<div class="subtext">I am a software developer based in NYC.</div>-->
-            <!--<div class="subtext-sm">I enjoy developing products that turn complex problems into intuitive solutions. Keeping up with contemporary technologies is essential to remain sharp in the development world and so I chose to build the first iteration of my personal site using Vue.</div>-->
-            <!--<div class="subtext-sm pTop10">Backbone.js, jQuery, Bootstrap, Node.js, Java are the main tricks up my sleeve. I especially enjoy creating interactive reusable components for web applications.</div>-->
-            <!--<div class="subtext-sm pTop10">When I'm not coding, you'll probably find me boxing, eating, or watching the next best superhero movie (✿◠‿◠).</div>-->
         </v-container>
 </template>
 <script>
@@ -30,7 +29,7 @@
     }
 
 </script>
-<style>
+<style lang="scss">
     .about {
         padding: 4.0rem 16px 0 !important;
     }
@@ -52,19 +51,6 @@
         .about {
             padding-top: 10.5rem !important;
         }
-
-        .intro {
-            font-size: 2.0rem;
-            line-height: 1.0;
-        }
-
-        .subtext{
-            font-size: 1.25rem;
-        }
-
-        .subtext-sm{
-            font-size: 1.0rem;
-        }
     }
 
     @media (min-width: 600px){
@@ -73,18 +59,10 @@
             padding-top: 4.0rem !important;
             align-items: flex-start;
         }
-
-        .subtext-sm {
-            font-size: 1.25rem;
-        }
-
-        .pTop10{
-            padding-top: 10px
-        }
     }
 
     .flex-row {
-        min-height: calc(100vh - 64px - 155px);
+        min-height: calc(100vh - 207px);
     }
 
     .contentContainer {
@@ -95,13 +73,41 @@
     }
 
     .heading-title {
-        font-size: 36px;
-        font-weight: 600px;
+        font-size: 28px;
+        font-weight: 600;
         text-align: right;
     }
 
+    @media (min-width: 860px){
+        .heading-title{
+            font-size: 36px;
+        }
+    }
+
+
     .bg-img {
-        background-image: url("../assets/NYC.png");
+        background-image: url("../assets/nyc2x.png");
         background-size: cover;
+    }
+
+    .pb-32 {
+        padding-bottom: 32px;
+    }
+
+    .pl-25{
+        padding-left: 25px !important;
+    }
+
+    .pr-25{
+        padding-right: 25px !important;
+    }
+
+    .desc {
+        font-size: 22px;
+    }
+
+    .keyword {
+        font-weight: 600;
+        color: $purple;
     }
 </style>

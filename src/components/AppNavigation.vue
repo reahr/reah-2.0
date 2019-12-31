@@ -8,13 +8,13 @@
             <v-spacer></v-spacer>
 
             <template v-if="$vuetify.breakpoint.smAndUp">
-                <v-toolbar-items>
+                <v-toolbar-items class="tool-links">
                     <v-btn to="/resume" exact text>Resume</v-btn>
                     <v-btn text>Portfolio</v-btn>
                     <v-btn text>Contact</v-btn>
                 </v-toolbar-items>
             </template>
-            <template v-if="$vuetify.breakpoint.xs">
+            <template v-if="$vuetify.breakpoint.xs" class="tool-links">
                 <v-btn icon>
                     <v-icon>mdi-briefcase-outline</v-icon>
                 </v-btn>
@@ -37,9 +37,13 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .navbar {
         position: fixed !important;
+        background-color: $purple !important;
+        .tool-links{
+            color: #fff !important;
+        }
     }
 
     .a-link {

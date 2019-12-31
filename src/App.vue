@@ -26,5 +26,5 @@
 </style>
 
 <style lang="scss">
-
+    $purple: #5f4b8b;
 </style>
