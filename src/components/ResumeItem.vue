@@ -2,15 +2,14 @@
     <li class="experience-item">
         <div class="experience-top sb">
             <div>
-                {{ item.startDate }} - {{ item.endDate }}
+                {{ item.startDate }} <span v-if="item.endDate"> - {{ item.endDate }}</span>
             </div>
         </div>
         <img class="time-point" :src="require('../assets/Purple Record.svg')"/>
         <div class="experience-desc">
-            <div class="sb" v-if="item.title">{{ item.title }} — <a class="link" target="_blank" :href="item.link">{{ item.company}}</a></div>
+            <div class="sb" v-if="item.title">{{ item.title }}<span v-if="item.company"> — <a class="link" target="_blank" :href="item.link">{{ item.company}}</a></span></div>
             <div v-html="item.desc">
             </div>
-            <!--Technologies used include vanilla JavaScript, jQuery, Backbone/Marionette, NodeJS, Bootstrap, HTML/CSS/SCSS-->
         </div>
     </li>
 </template>
@@ -26,7 +25,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 16px;
+        margin-bottom: 4px;
     }
 
     .experience-item {

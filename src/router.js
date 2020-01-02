@@ -12,17 +12,23 @@ export default new Router({
         {
             path: '/',
             name: 'home',
-            component: Home
+            component: Home,
+            meta: {
+                title: 'Reah Rajmangal | Home',
+            }
         },
         {
             path: '/resume',
             name: 'resume',
-            component: Resume
+            component: Resume,
+            meta: {
+                title: 'Reah Rajmangal | Resume',
+            }
         }
     ],
 
     //to allow scroll to initial position every route jump
     scrollBehavior (to, from, savedPosition) {
         return { x: 0, y: 0 }
-    }
+    },
 });

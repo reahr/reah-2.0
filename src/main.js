@@ -14,6 +14,12 @@ Vue.config.productionTip = false;
 
 Vue.use(vuetify);
 
+router.beforeEach((to, from, next) => {
+    document.title = to.meta.title;
+    next()
+});
+
+
 new Vue({
     created(){AOS.init()},
     router,
@@ -24,3 +30,4 @@ new Vue({
 
 
 Vue.component('tippy', TippyComponent);
+

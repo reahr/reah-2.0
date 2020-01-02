@@ -1,1 +1,36 @@
 $purple: #5f4b8b;
+
+
+.theme--light {
+  &.v-application {
+    background: #fff !important;
+  }
+
+  &.v-footer .v-card {
+    background: $purple
+  }
+}
+
+.v-footer {
+  .theme--light {
+    &.v-divider, &.v-btn.v-btn--icon {
+      color: #fff !important;
+      border-color: #fff !important;
+    }
+
+    &.v-divider {
+      width: 75%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+header, footer {
+  .theme--light {
+    &.v-btn, &.v-card .v-card__text {
+      color: #fff;
+    }
+  }
+}
+

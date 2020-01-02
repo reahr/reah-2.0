@@ -2,7 +2,7 @@
     <v-sheet>
         <v-container class="home transitionInto">
             <div class="intro text-center">Hi, I'm Reah!</div>
-            <div class="subtext text-center">Software Developer | Ninja</div>
+            <div class="subtext text-center">Software Developing Ninja</div>
             <img :src="require('../assets/Circle.svg')"/>
             <v-btn icon class="scrollNext bounce" v-on:click="scrollToNext">
                 <v-icon>mdi-chevron-down</v-icon>

@@ -6,7 +6,7 @@
                     flat
                     tile
                     width="100%"
-                    class="text-center"
+                    class="text-center purple-bg"
             >
                 <v-card-text>
                     <v-btn
@@ -43,3 +43,6 @@
         }),
     }
 </script>
+
+<style lang="scss">
+</style>

@@ -1,5 +1,5 @@
 <template>
-    <v-app class="my-app">
+    <v-app class="my-app" :style="{background: $vuetify.theme.themes['light'].background}" >
         <app-navigation></app-navigation>
         <router-view></router-view>
         <Footer></Footer>
@@ -17,6 +17,8 @@
             Footer
         }
     };
+
+
 </script>
 
 <style>
@@ -26,5 +28,4 @@
 </style>
 
 <style lang="scss">
-    $purple: #5f4b8b;
 </style>
