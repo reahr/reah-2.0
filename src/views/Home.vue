@@ -1,5 +1,5 @@
 <template>
-    <v-sheet>
+    <v-sheet v-cloak>
         <v-container class="home transitionInto">
             <div class="intro text-center">Hi, I'm Reah!</div>
             <div class="subtext text-center">Software Developing Ninja</div>

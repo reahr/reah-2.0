@@ -15,7 +15,8 @@
                         </div>
                         <div class="pb-32">My goal is to become an <span class="keyword">UX engineer</span> and use the skills I honed as a <span class="keyword">front-end developer</span> to turn  designs into beautiful and intuitive products.</div>
                         <div class="pb-32"><span class="keyword">BackboneJS</span>, <span class="keyword">jQuery</span>, and <span class="keyword">Bootstrap</span> are the main tricks up my sleeve. I built this personal site as an entry way to <span class="keyword">VueJS</span> development.</div>
-                        <div>When I’m not coding, you’ll find me boxing, eating, or watching the next big superhero movie.</div>
+                        <div>When I’m not coding, you’ll find me boxing, eating, or watching the next big superhero movie.<img :src="require('../assets/spidey.svg')" height="22px;"/>
+                        </div>
                     </div>
                 </v-col>
             </v-row>

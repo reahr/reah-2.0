@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="transitionInto">
         <v-container class="resume-container">
             <div class="p-32 resume-title">Experience</div>
             <ul class="experience-list">
@@ -17,14 +17,16 @@
                 <!--<inline-svg class="responsive-img" :src="require('../assets/Skills Infographic (2).svg')"/>-->
             </div>
             <hr>
-            <div class="p-32 resume-title">Education</div>
-            <ul class="experience-list edu-list">
-                <resume-item
-                        v-for="item in eduItems"
-                        v-bind:key="item.id"
-                        v-bind:item="item"
-                ></resume-item>
-            </ul>
+            <div data-aos="fade-zoom-in">
+                <div class="p-32 resume-title">Education</div>
+                <ul class="experience-list edu-list">
+                    <resume-item
+                            v-for="item in eduItems"
+                            v-bind:key="item.id"
+                            v-bind:item="item"
+                    ></resume-item>
+                </ul>
+            </div>
         </v-container>
     </div>
 </template>

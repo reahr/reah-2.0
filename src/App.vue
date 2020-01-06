@@ -25,6 +25,29 @@
     ::-webkit-scrollbar {
         display: none;
     }
+
+    [v-cloak] {
+        display: none
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
+        }
+
+        100% {
+            opacity: 1;
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+
+        }
+    }
+
+    .transitionInto {
+        animation: fade-in 0.5s;
+    }
 </style>
 
 <style lang="scss">
