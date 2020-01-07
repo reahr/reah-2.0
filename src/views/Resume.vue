@@ -10,8 +10,7 @@
                 ></resume-item>
             </ul>
             <hr>
-            <div class="pb-32"  data-aos="fade-zoom-in"
-            >
+            <div class="pb-32"  data-aos="fade-zoom-in">
                 <div class="p-32 resume-title">Skills</div>
                 <info></info>
                 <!--<inline-svg class="responsive-img" :src="require('../assets/Skills Infographic (2).svg')"/>-->
@@ -27,6 +26,7 @@
                     ></resume-item>
                 </ul>
             </div>
+            <div class="pb-32 resume-title text-center"><a class="link" href="../resume.pdf" target="_blank"><img height="32px" :src="require('../assets/picture_as_pdf-24px.svg')"></a></div>
         </v-container>
     </div>
 </template>
@@ -102,7 +102,7 @@
         }),
     }
 </script>
-<style scoped>
+<style scoped lang="scss">
     .resume-container {
         padding-top: 4.5rem;
         padding-left: 15px !important;
@@ -162,6 +162,10 @@
 
     .pb-32 {
        padding-bottom: 32px
+    }
+
+    .pt-32 {
+        padding-top: 32px;
     }
 
     .resume-title {

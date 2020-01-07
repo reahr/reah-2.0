@@ -2,6 +2,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Resume from './views/Resume.vue';
+import Contact from './views/Contact.vue';
+
 
 Vue.use(Router);
 
@@ -24,7 +26,16 @@ export default new Router({
             meta: {
                 title: 'Reah Rajmangal | Resume',
             }
-        }
+        },
+        {
+            path: '/contact',
+            name: 'contact',
+            component: Contact,
+            meta: {
+                title: 'Reah Rajmangal | Contact',
+            }
+        },
+
     ],
 
     //to allow scroll to initial position every route jump

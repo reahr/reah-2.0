@@ -86,6 +86,5 @@
 
     .link {
         color: #5f4b8b;
-        text-decoration: underline;
     }
 </style>

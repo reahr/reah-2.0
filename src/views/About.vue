@@ -1,7 +1,9 @@
 <template>
         <v-container fluid class="about">
             <v-row class="flex-row" :align="alignment"
-                   :justify="justify">
+                   :justify="justify"
+                   data-aos="fade-zoom-in"
+            >
                 <v-col     v-if="$vuetify.breakpoint.smAndUp"
                            :col="6" class="bg-img pr-25">
                     <div class="contentContainer d-flex">
