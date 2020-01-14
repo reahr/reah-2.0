@@ -60,3 +60,27 @@ header, footer {
   transform: scaleX(1);
 }
 
+.link:before, .link:hover:before, .link:focus:before {
+  opacity: .52;
+}
+
+
+.link {
+  transition: color 0.3s ease;
+  color: #5f4b8b !important;
+}
+
+.link:hover, .link:focus {
+  color: #5f4b8b8f !important;
+}
+
+.content-btn {
+  border-radius: 0;
+  transition: background-color 0.3s ease;
+  background-color: #5f4b8b !important;
+  color: #fff !important;
+}
+
+.content-btn:hover, content-btn:focus {
+  background-color: #5f4b8b8f !important;
+}

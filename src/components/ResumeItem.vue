@@ -83,8 +83,4 @@
     .sb {
         font-weight: 600;
     }
-
-    .link {
-        color: #5f4b8b;
-    }
 </style>

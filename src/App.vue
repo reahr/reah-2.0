@@ -22,9 +22,6 @@
 </script>
 
 <style>
-    ::-webkit-scrollbar {
-        display: none;
-    }
 
     [v-cloak] {
         display: none

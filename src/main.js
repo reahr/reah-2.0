@@ -7,6 +7,9 @@ import '@babel/polyfill';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import VueTippy, { TippyComponent } from "vue-tippy";
+import axios from 'axios'
+
+Vue.prototype.$http = axios;
 
 Vue.use(VueTippy);
 

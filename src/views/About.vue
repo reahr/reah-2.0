@@ -2,7 +2,6 @@
         <v-container fluid class="about">
             <v-row class="flex-row" :align="alignment"
                    :justify="justify"
-                   data-aos="fade-zoom-in"
             >
                 <v-col     v-if="$vuetify.breakpoint.smAndUp"
                            :col="6" class="bg-img pr-25">
@@ -11,7 +10,7 @@
                         </div>
                     </div>
                 </v-col>
-                <v-col :col="6" class="pl-25">
+                <v-col :col="6" class="pl-25 p-24">
                     <div class="contentContainer d-flex desc">
                         <div v-if="$vuetify.breakpoint.xs" class="pb-32">I’m a <span class="keyword">software developer</span> based in <span class="keyword">NYC</span>…
                         </div>
@@ -37,16 +36,24 @@
 </script>
 <style lang="scss">
     .about {
-        padding: 4.0rem 16px 0 !important;
+        padding: 56px 16px 0 !important;
+    }
+
+    @media (min-width: 960px){
+        .about {
+            padding-top: 64px;
+        }
     }
 
     .intro {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
+        font-weight: 600;
         line-height: 1.0;
     }
 
     .subtext{
-        font-size: 1.0rem;
+        font-size: 1.5rem;
+        font-weight: 500;
     }
 
     .subtext-sm{
@@ -56,7 +63,6 @@
     @media (min-width: 600px){
         .about {
             justify-content: flex-start;
-            padding-top: 4.0rem !important;
             align-items: flex-start;
         }
     }
@@ -67,7 +73,7 @@
 
     .contentContainer {
         min-height: 100%;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
         flex-flow: column;
     }
@@ -75,7 +81,7 @@
     .heading-title {
         font-size: 28px;
         font-weight: 600;
-        text-align: right;
+        text-align: center;
     }
 
     @media (min-width: 860px){
@@ -92,6 +98,11 @@
 
     .pb-32 {
         padding-bottom: 32px;
+    }
+
+    .p-24 {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
     }
 
     @media (min-width: 600px){
@@ -111,5 +122,11 @@
     .keyword {
         font-weight: 600;
         color: $purple;
+    }
+
+    @media (max-width: 600px){
+        .ava {
+            height: 130px;
+        }
     }
 </style>

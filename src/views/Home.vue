@@ -1,9 +1,9 @@
 <template>
     <v-sheet v-cloak>
         <v-container class="home transitionInto">
-            <div class="intro text-center">Hi, I'm Reah!</div>
-            <div class="subtext text-center">Software Developing Ninja</div>
-            <img :src="require('../assets/Circle.svg')"/>
+            <div class="intro text-center pb-24">Hi, I'm Reah!</div>
+            <div class="subtext text-center pb-24">Software Developing Ninja</div>
+            <img class="ava" :src="require('../assets/Circle.svg')"/>
             <v-btn icon class="scrollNext bounce" v-on:click="scrollToNext">
                 <v-icon>mdi-chevron-down</v-icon>
             </v-btn>
@@ -62,7 +62,11 @@ export default {
 };
 </script>
 
-<style scope>
+<style scoped>
+    body::-webkit-scrollbar {
+        display: none !important;
+    }
+
     .home {
         height: 100vh;
         width: 100%;
@@ -71,7 +75,14 @@ export default {
         align-items: center;
         flex-direction: column;
         position: relative;
-        padding-top: 3.0rem;
+        padding-top: 56px;
+    }
+
+    @media (min-width: 960px){
+        .home {
+            padding-top: 64px;
+            padding-bottom: 0;
+        }
     }
 
     .scrollNext {
@@ -134,9 +145,9 @@ export default {
     }
 
     @media (min-width: 600px){
-
         .intro {
             font-size: 6.25rem;
+            font-weight: 600;
             line-height: 6.25rem;
         }
 
@@ -144,5 +155,9 @@ export default {
             font-size: 2.0rem;
             font-weight: 500;
         }
+    }
+
+    .pb-24 {
+        padding-bottom: 24px;
     }
 </style>

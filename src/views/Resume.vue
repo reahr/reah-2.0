@@ -26,7 +26,8 @@
                     ></resume-item>
                 </ul>
             </div>
-            <div class="pb-32 resume-title text-center"><a class="link" href="../resume.pdf" target="_blank"><img height="32px" :src="require('../assets/picture_as_pdf-24px.svg')"></a></div>
+            <div class="pb-32 resume-title text-center"><a class="link" href="/resume.pdf" target="_blank"><img height="32px" :src="require('../assets/picture_as_pdf-24px.svg')"></a></div>
+            <!--<div class="pb-32 resume-title">Portfolio section coming soon :)</div>-->
         </v-container>
     </div>
 </template>
@@ -104,20 +105,14 @@
 </script>
 <style scoped lang="scss">
     .resume-container {
-        padding-top: 4.5rem;
+        padding-top: 56px;
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
 
-    @media (max-width: 600px) {
-        .resume-container {
-            padding-top: 4.5rem !important;
-        }
-    }
-
     @media (min-width: 960px){
         .resume-container{
-            padding-top: 5.0rem;
+            padding-top: 64px;
         }
     }
 
@@ -178,5 +173,20 @@
         background-color: #5f4b8b;
         height: 1px;
         border: none;
+    }
+
+    @media  (max-width: 600px){
+        .p-32 {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+
+        .pb-32 {
+            padding-bottom: 16px
+        }
+
+        .pt-32 {
+            padding-top: 16px;
+        }
     }
 </style>

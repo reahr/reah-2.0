@@ -34,8 +34,7 @@ export default new Router({
             meta: {
                 title: 'Reah Rajmangal | Contact',
             }
-        },
-
+        }
     ],
 
     //to allow scroll to initial position every route jump

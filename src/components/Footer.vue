@@ -38,7 +38,6 @@
                 'mdi-email',
                 'mdi-linkedin',
                 'mdi-github-circle',
-                'mdi-spotify',
             ],
         }),
     }
