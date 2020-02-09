@@ -9,14 +9,20 @@
                     class="text-center purple-bg"
             >
                 <v-card-text>
-                    <v-btn
-                            v-for="icon in icons"
-                            :key="icon"
-                            class="mx-2"
-                            icon
+                    <a v-for="icon in icons"
+                       :key="icon.id"
+                       :href="icon.link"
+                        target="_blank"
                     >
-                        <v-icon size="32px">{{ icon }}</v-icon>
-                    </v-btn>
+                        <v-btn
+                                class="mx-2"
+                                icon
+                                :content="icon.accessibleText"
+                                v-tippy='{followCursor : "initial", animation:"fade", delay:100, arrow : true, placement:"bottom"}'
+                        >
+                            <v-icon size="32px">{{ icon.i }}</v-icon>
+                        </v-btn>
+                    </a>
                 </v-card-text>
 
                 <v-divider></v-divider>
@@ -35,9 +41,9 @@
             padless: true,
             flat: true,
             icons: [
-                'mdi-email',
-                'mdi-linkedin',
-                'mdi-github-circle',
+                {id: 0, i: 'mdi-email', link: "mailto:reahrajmangal@gmail.com", accessibleText: "Email"},
+                {id: 1, i: 'mdi-linkedin', link: "https://linkedin.com/in/reahr", accessibleText: "Linkedin"},
+                {id: 2, i: 'mdi-github-circle', link: "https://github.com/reahr", accessibleText: "Github"},
             ],
         }),
     }

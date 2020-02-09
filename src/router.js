@@ -16,7 +16,7 @@ export default new Router({
             name: 'home',
             component: Home,
             meta: {
-                title: 'Reah Rajmangal | Home',
+                title: 'Reah Rajmangal',
             }
         },
         {
@@ -24,7 +24,7 @@ export default new Router({
             name: 'resume',
             component: Resume,
             meta: {
-                title: 'Reah Rajmangal | Resume',
+                title: 'Resume — Reah Rajmangal',
             }
         },
         {
@@ -32,7 +32,7 @@ export default new Router({
             name: 'contact',
             component: Contact,
             meta: {
-                title: 'Reah Rajmangal | Contact',
+                title: 'Contact — Reah Rajmangal',
             }
         }
     ],

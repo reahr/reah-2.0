@@ -1,20 +1,24 @@
 <template>
-    <v-sheet v-cloak>
-        <v-container class="home transitionInto">
-            <div class="intro text-center pb-24">Hi, I'm Reah!</div>
-            <div class="subtext text-center pb-24">Software Developing Ninja</div>
-            <img class="ava" :src="require('../assets/Circle.svg')"/>
-            <v-btn icon class="scrollNext bounce" v-on:click="scrollToNext">
-                <v-icon>mdi-chevron-down</v-icon>
-            </v-btn>
-        </v-container>
-        <About ref="about"></About>
-    </v-sheet>
+    <div>
+        <Loader v-show="!loaded"></Loader>
+        <v-sheet v-show="loaded">
+            <v-container class="home transitionInto">
+                <div class="intro text-center pb-24">Hi, I'm Reah!</div>
+                <div class="subtext text-center pb-24">Software Developing Ninja</div>
+                <img v-on:load="onLoaded" class="ava" :src="require('../assets/Circle.svg')"/>
+                <v-btn icon class="scrollNext bounce" v-on:click="scrollToNext">
+                    <v-icon>mdi-chevron-down</v-icon>
+                </v-btn>
+            </v-container>
+            <About ref="about"></About>
+        </v-sheet>
+    </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import About from '@/views/About.vue';
+import Loader from '@/components/Loader';
 
 export default {
     methods: {
@@ -27,6 +31,11 @@ export default {
                 behavior: 'smooth',
                 block: 'start'
             });
+        },
+        onLoaded(){
+            setTimeout(()=>{
+                this.loaded = true;
+            },1200);
         }
     },
     created () {
@@ -37,6 +46,7 @@ export default {
     },
     data () {
         return {
+            loaded: false,
             alignmentsAvailable: [
                 'start',
                 'center',
@@ -57,7 +67,8 @@ export default {
     },
     name: 'home',
     components: {
-        About
+        About,
+        Loader
     }
 };
 </script>

@@ -5,7 +5,7 @@
     <div class="transitionInto">
         <v-container class="contact-container">
             <div v-if="!msgSent">
-                <div class="pb-24 contact-title">Message me on <a class="link">LinkedIn</a> or drop a note below!</div>
+                <div class="pb-24 contact-title">Message me on <a class="link" target="_blank" href="https://www.linkedin.com/in/reahr/">LinkedIn</a> or drop a note below!</div>
                 <v-form
                         ref="form"
                         v-model="valid"
@@ -46,9 +46,9 @@
                     </div>
                 </v-form>
             </div>
-            <!--<div class="transitionInto" v-if="msgSent">-->
-                <!--<div class="p-24 contact-title">Thanks for your message {{name}}. I'll get back to you if you have any questions :)</div>-->
-            <!--</div>-->
+            <div class="transitionInto" v-if="msgSent">
+                <div class="p-24 contact-title">Thanks for your message {{name}}. I'll get back to you if you have any questions :)</div>
+            </div>
         </v-container>
     </div>
 </template>
@@ -107,6 +107,7 @@
             },
             getParsedName (name){
                 var names = name.split(" ");
+                console.log(names[0]);
                 return names[0];
             }
         },
@@ -168,8 +169,4 @@
             padding-bottom: 12px;
         }
     }
-
-    //font-size: 24
-    //padding-left: 15px
-    //padding-top & bottom: 12px
 </style>

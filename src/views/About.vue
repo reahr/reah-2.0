@@ -15,7 +15,7 @@
                         <div v-if="$vuetify.breakpoint.xs" class="pb-32">I’m a <span class="keyword">software developer</span> based in <span class="keyword">NYC</span>…
                         </div>
                         <div class="pb-32">My goal is to become an <span class="keyword">UX engineer</span> and use the skills I honed as a <span class="keyword">front-end developer</span> to turn  designs into beautiful and intuitive products.</div>
-                        <div class="pb-32"><span class="keyword">BackboneJS</span>, <span class="keyword">jQuery</span>, and <span class="keyword">Bootstrap</span> are the main tricks up my sleeve. I built this personal site as an entry way to <span class="keyword">VueJS</span> development.</div>
+                        <div class="pb-32"><span class="keyword">Marionette</span>, <span class="keyword">Backbone.js</span>, <span class="keyword">jQuery</span>, and <span class="keyword">Bootstrap</span> are the main tricks up my sleeve. I built this personal site as an entry way to <span class="keyword">Vue.js</span> development.</div>
                         <div>When I’m not coding, you’ll find me boxing, eating, or watching the next big superhero movie.<img :src="require('../assets/spidey.svg')" height="22px;"/>
                         </div>
                     </div>
@@ -65,6 +65,8 @@
             justify-content: flex-start;
             align-items: flex-start;
         }
+
+        
     }
 
     .flex-row {
@@ -127,6 +129,21 @@
     @media (max-width: 600px){
         .ava {
             height: 130px;
+        }
+
+        .pb-32 {
+            padding-bottom: 16px;
+        }
+        
+        .about {
+            height: 100vh;
+            display: flex;
+        }
+    }
+
+    @media (max-width: 320px) {
+        .desc {
+            font-size: 18px;
         }
     }
 </style>

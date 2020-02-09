@@ -1,5 +1,8 @@
 $purple: #5f4b8b;
 
+.v-application {
+  font-family: Lato,sans-serif !important;
+}
 
 .theme--light {
   &.v-application {
@@ -23,6 +26,11 @@ $purple: #5f4b8b;
       margin-right: auto;
       margin-left: auto;
     }
+
+    a {
+      color: #fff !important;
+      text-decoration: none !important;
+    }
   }
 }
 
@@ -37,6 +45,9 @@ header, footer {
 .link {
   position: relative;
   text-decoration: none;
+  &.sb{
+    font-weight:600;
+  }
 }
 
 .link:before {

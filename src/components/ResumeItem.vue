@@ -20,7 +20,7 @@
     };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .experience-top {
         width: 100%;
         display: flex;
