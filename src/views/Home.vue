@@ -98,8 +98,7 @@ export default {
 
     .scrollNext {
         position: absolute !important;
-        bottom:12px;
-        padding-bottom: 32px;
+        bottom:60px;
     }
 
     @-webkit-keyframes bounce {
