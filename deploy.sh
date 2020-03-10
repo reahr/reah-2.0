@@ -13,7 +13,7 @@ npm run build
 echo Adding to git branch gh-pages...
 echo
 git add dist -f
-git commit -m $msg
+git commit -m ${msg}
 git push origin `git subtree split --prefix dist master`:gh-pages --force
 
 echo
