@@ -10,7 +10,6 @@ else
 fi
 
 npm run build
-echo
 echo Adding to git branch gh-pages...
 echo
 git add dist -f

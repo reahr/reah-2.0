@@ -43,7 +43,7 @@
             icons: [
                 {id: 0, i: 'mdi-email', link: "mailto:reahrajmangal@gmail.com", accessibleText: "Email"},
                 {id: 1, i: 'mdi-linkedin', link: "https://linkedin.com/in/reahr", accessibleText: "Linkedin"},
-                {id: 2, i: 'mdi-github-circle', link: "https://github.com/reahr", accessibleText: "Github"},
+                {id: 2, i: 'mdi-github', link: "https://github.com/reahr", accessibleText: "Github"},
             ],
         }),
     }
