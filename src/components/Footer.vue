@@ -2,7 +2,7 @@
         <v-footer :padless="padless">
                 <v-row no-gutters class="flex purple-bg">
                     <v-col class='align-text d-flex pl-3 pr-3' cols="12" sm="4">
-                        <strong>Reah Rajmangal</strong> — {{ new Date().getFullYear() }}
+                        <strong>Reah Rajmangal</strong>&nbsp; — {{ new Date().getFullYear() }}
                     </v-col>
                     <v-col class='pr-3 pl-3 align-icons d-flex' cols="12" sm="8">
                         <a v-for="icon in icons"

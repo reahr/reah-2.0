@@ -4,7 +4,7 @@
             <v-col class="d-flex first-col" cols='12' sm="4">
                 <v-img max-height="175px" class="max-height" contain :src="require('../assets/reah-real.png')"></v-img>
             </v-col>
-            <v-col class="d-flex" cols="12" sm="8">
+            <v-col class="f15 d-flex" cols="12" sm="8">
                 <div class="pb-32">My goal is to become an <span class="keyword">UX engineer</span> and use the skills I honed as a <span class="keyword">front-end developer</span> to turn  designs into beautiful and intuitive products.</div>
                 <div class="pb-32"><span class="keyword">Marionette</span>, <span class="keyword">Backbone.js</span>, <span class="keyword">jQuery</span>, and <span class="keyword">Bootstrap</span> are the main tricks up my sleeve. I built this personal site as an entry way to <span class="keyword">Vue.js</span> development.</div>
                 <div>When I’m not coding, you’ll find me boxing, eating, or watching the next big superhero movie <img :src="require('../assets/spidey.svg')" height="22px;"/>.
@@ -159,6 +159,9 @@
         .first-col {
             padding-bottom: 0;
         }
+    }
 
+    .f15 {
+        font-size: 1.5rem;
     }
 </style>
