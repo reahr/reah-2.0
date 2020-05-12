@@ -48,4 +48,7 @@
 </style>
 
 <style lang="scss">
+    html {
+        overflow-y: auto !important;
+    }
 </style>

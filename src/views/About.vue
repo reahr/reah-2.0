@@ -1,27 +1,17 @@
 <template>
-        <v-container fluid class="about">
-            <v-row class="flex-row" :align="alignment"
-                   :justify="justify"
-            >
-                <v-col     v-if="$vuetify.breakpoint.smAndUp"
-                           :col="6" class="bg-img pr-25">
-                    <div class="contentContainer d-flex">
-                        <div class="heading-title">I’m a <span class="keyword">software developer</span><br>based in <span class="keyword">NYC</span>…
-                        </div>
-                    </div>
-                </v-col>
-                <v-col :col="6" class="pl-25 p-24">
-                    <div class="contentContainer d-flex desc">
-                        <div v-if="$vuetify.breakpoint.xs" class="pb-32">I’m a <span class="keyword">software developer</span> based in <span class="keyword">NYC</span>…
-                        </div>
-                        <div class="pb-32">My goal is to become an <span class="keyword">UX engineer</span> and use the skills I honed as a <span class="keyword">front-end developer</span> to turn  designs into beautiful and intuitive products.</div>
-                        <div class="pb-32"><span class="keyword">Marionette</span>, <span class="keyword">Backbone.js</span>, <span class="keyword">jQuery</span>, and <span class="keyword">Bootstrap</span> are the main tricks up my sleeve. I built this personal site as an entry way to <span class="keyword">Vue.js</span> development.</div>
-                        <div>When I’m not coding, you’ll find me boxing, eating, or watching the next big superhero movie.<img :src="require('../assets/spidey.svg')" height="22px;"/>
-                        </div>
-                    </div>
-                </v-col>
-            </v-row>
-        </v-container>
+    <v-container class="pt-8 pb-8">
+        <v-row no-gutters>
+            <v-col class="d-flex first-col" cols='12' sm="4">
+                <v-img max-height="175px" class="max-height" contain :src="require('../assets/reah-real.png')"></v-img>
+            </v-col>
+            <v-col class="d-flex" cols="12" sm="8">
+                <div class="pb-32">My goal is to become an <span class="keyword">UX engineer</span> and use the skills I honed as a <span class="keyword">front-end developer</span> to turn  designs into beautiful and intuitive products.</div>
+                <div class="pb-32"><span class="keyword">Marionette</span>, <span class="keyword">Backbone.js</span>, <span class="keyword">jQuery</span>, and <span class="keyword">Bootstrap</span> are the main tricks up my sleeve. I built this personal site as an entry way to <span class="keyword">Vue.js</span> development.</div>
+                <div>When I’m not coding, you’ll find me boxing, eating, or watching the next big superhero movie <img :src="require('../assets/spidey.svg')" height="22px;"/>.
+                </div>
+            </v-col>
+        </v-row>
+    </v-container>
 </template>
 <script>
     export default {
@@ -34,7 +24,7 @@
     }
 
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     .about {
         padding: 56px 16px 0 !important;
     }
@@ -66,7 +56,7 @@
             align-items: flex-start;
         }
 
-        
+
     }
 
     .flex-row {
@@ -134,7 +124,7 @@
         .pb-32 {
             padding-bottom: 16px;
         }
-        
+
         .about {
             height: 100vh;
             display: flex;
@@ -145,5 +135,30 @@
         .desc {
             font-size: 18px;
         }
+    }
+
+
+    .row {
+        .d-flex{
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    .max-height {
+        max-height: 120px;
+    }
+
+    .first-col {
+        padding-bottom: 12px !important;
+    }
+
+    @media (min-width: 768px) {
+        .max-height {
+        }
+        .first-col {
+            padding-bottom: 0;
+        }
+
     }
 </style>

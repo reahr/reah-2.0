@@ -1,17 +1,14 @@
 <template>
-    <div>
-        <Loader v-show="!loaded"></Loader>
-        <v-sheet v-show="loaded">
-            <v-container class="home transitionInto">
-                <div class="intro text-center pb-24">Hi, I'm Reah!</div>
-                <div class="subtext text-center pb-24">Software Developing Ninja</div>
-                <img v-on:load="onLoaded" class="ava" :src="require('../assets/Circle.svg')"/>
-                <v-btn icon class="scrollNext bounce" v-on:click="scrollToNext">
-                    <v-icon>mdi-chevron-down</v-icon>
-                </v-btn>
-            </v-container>
-            <About ref="about"></About>
-        </v-sheet>
+    <div class="home">
+        <div class="banner">
+            <div class="pb-2">
+                Reah Rajmangal
+            </div>
+            <div class="pt-2 border-top">
+                Software Developer
+            </div>
+        </div>
+        <about></about>
     </div>
 </template>
 
@@ -74,32 +71,34 @@ export default {
 </script>
 
 <style scoped>
-    body::-webkit-scrollbar {
-        display: none !important;
-    }
 
     .home {
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        position: relative;
         padding-top: 56px;
     }
 
     @media (min-width: 960px){
         .home {
             padding-top: 64px;
-            padding-bottom: 0;
         }
     }
 
-    .scrollNext {
-        position: absolute !important;
-        bottom:3.25rem;
+    .banner {
+        height: 30vh;
+        color: #fff;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content:center;
+        background-image: linear-gradient(to bottom, rgba(95, 75, 139, 0.78), #b2abbc);
     }
+
+    .border-top {
+        border-top: 4px solid #fff;
+    }
+
 
     @-webkit-keyframes bounce {
         0%,
@@ -153,23 +152,6 @@ export default {
 
     .transitionInto {
         animation: fade-in 0.5s;
-    }
-
-    @media (min-width: 600px){
-        .intro {
-            font-size: 6.25rem;
-            font-weight: 600;
-            line-height: 6.25rem;
-        }
-
-        .subtext {
-            font-size: 2.0rem;
-            font-weight: 500;
-        }
-    }
-
-    .pb-24 {
-        padding-bottom: 24px;
     }
 
 

@@ -1,36 +1,26 @@
 <template>
-        <v-footer
-                :padless="padless"
-        >
-            <v-card
-                    flat
-                    tile
-                    width="100%"
-                    class="text-center purple-bg"
-            >
-                <v-card-text>
-                    <a v-for="icon in icons"
-                       :key="icon.id"
-                       :href="icon.link"
-                        target="_blank"
-                    >
-                        <v-btn
-                                class="mx-2"
-                                icon
-                                :content="icon.accessibleText"
-                                v-tippy='{followCursor : "initial", animation:"fade", delay:100, arrow : true, placement:"bottom"}'
+        <v-footer :padless="padless">
+                <v-row no-gutters class="flex purple-bg">
+                    <v-col class='align-text d-flex pl-3 pr-3' cols="12" sm="4">
+                        <strong>Reah Rajmangal</strong> — {{ new Date().getFullYear() }}
+                    </v-col>
+                    <v-col class='pr-3 pl-3 align-icons d-flex' cols="12" sm="8">
+                        <a v-for="icon in icons"
+                           :key="icon.id"
+                           :href="icon.link"
+                           target="_blank"
                         >
-                            <v-icon size="32px">{{ icon.i }}</v-icon>
-                        </v-btn>
-                    </a>
-                </v-card-text>
-
-                <v-divider></v-divider>
-
-                <v-card-text>
-                    <strong>Reah Rajmangal</strong> — {{ new Date().getFullYear() }}
-                </v-card-text>
-            </v-card>
+                            <v-btn
+                                    class="mx-2"
+                                    icon
+                                    :content="icon.accessibleText"
+                                    v-tippy='{followCursor : "initial", animation:"fade", delay:100, arrow : true, placement:"bottom"}'
+                            >
+                                <v-icon size="32px">{{ icon.i }}</v-icon>
+                            </v-btn>
+                        </a>
+                    </v-col>
+                </v-row>
         </v-footer>
 </template>
 
@@ -49,5 +39,27 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+    .d-flex {
+        align-items: center;
+    }
+
+    .v-footer .theme--light.v-btn.v-btn--icon {
+        color: $purple !important;
+    }
+
+    .align-text, .align-icons {
+        color: $purple !important;
+        justify-content: center;
+    }
+
+    @media (min-width: 768px){
+        .align-text {
+            justify-content: flex-start;
+        }
+        .align-icons {
+            justify-content: flex-end;
+        }
+    }
+
 </style>

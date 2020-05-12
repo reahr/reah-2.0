@@ -39,10 +39,15 @@
 
 <style scoped lang="scss">
     .navbar {
+        box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.5);
         position: fixed !important;
-        background-color: $purple !important;
         .tool-links{
-            color: #fff !important;
+            color: #000 !important;
+            .v-btn {
+                color: $purple;
+                font-weight: bold;
+                font-size: 16px;
+            }
         }
     }
 

@@ -15,6 +15,7 @@ $purple: #5f4b8b;
 }
 
 .v-footer {
+  background-color: inherit !important;
   .theme--light {
     &.v-divider, &.v-btn.v-btn--icon {
       color: #fff !important;
@@ -26,18 +27,18 @@ $purple: #5f4b8b;
       margin-right: auto;
       margin-left: auto;
     }
+  }
 
-    a {
-      color: #fff !important;
-      text-decoration: none !important;
-    }
+  a {
+    color: $purple !important;
+    text-decoration: none !important;
   }
 }
 
 header, footer {
   .theme--light {
     &.v-btn, &.v-card .v-card__text {
-      color: #fff;
+      color: $purple !important;
     }
   }
 }
@@ -92,6 +93,10 @@ header, footer {
   color: #fff !important;
 }
 
-.content-btn:hover, content-btn:focus {
+.content-btn:hover, .content-btn:focus {
   background-color: #5f4b8b8f !important;
+}
+
+.purple-please {
+  color: $purple !important;
 }
