@@ -1,5 +1,6 @@
 <template>
-    <div class="home">
+    <Loader v-if="!loaded"></Loader>
+    <div v-else class="home">
         <div class="banner">
             <div class="pb-2">
                 Reah Rajmangal
@@ -19,21 +20,11 @@ import Loader from '@/components/Loader';
 
 export default {
     methods: {
-        handleScroll (event) {
-            // Any code to be executed when the window is scrolled
-        },
-        scrollToNext: function(){
-            var elem = this.$refs.about.$el;
-            elem.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        },
         onLoaded(){
             setTimeout(()=>{
                 this.loaded = true;
             },1200);
-        }
+        },
     },
     created () {
 //        window.addEventListener('scroll', this.handleScroll);
@@ -41,6 +32,16 @@ export default {
     destroyed () {
 //        window.removeEventListener('scroll', this.handleScroll);
     },
+
+    mounted: function () {
+        this.$nextTick(function () {
+            // Code that will run only after the
+            // entire view has been rendered
+            this.onLoaded();
+
+        })
+    },
+
     data () {
         return {
             loaded: false,
